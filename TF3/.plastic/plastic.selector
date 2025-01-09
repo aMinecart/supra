@@ -1,4 +1,0 @@
-repository "TF3@Collection_Studios@cloud"
-  path "/"
-    br "/main"
-    co "/main"
