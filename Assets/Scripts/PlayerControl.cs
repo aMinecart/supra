@@ -19,6 +19,7 @@ public class PlayerControl : MonoBehaviour
     // based off of TF2's 100% movement speed values for now
     private float max_speed = 5.715f; // 1 foot = 16 Hammer Units, 1 foot = 0.3048 meters
     private float max_airspeed = 0.5715f;
+    private float stop_speed = 1.905f; // 100 HU
 
     private float acceleration = 5.6f;
     private float air_acceleration;
@@ -30,9 +31,12 @@ public class PlayerControl : MonoBehaviour
     private Vector3 applyFriction (Vector3 curr_velocity, float friction)
     {
         float speed = curr_velocity.magnitude;
+        float control = speed < stop_speed ? stop_speed : speed;
+
         if (speed != 0)
         {
-            float reduction = speed * friction * Time.fixedDeltaTime;
+            float reduction = control * friction * Time.fixedDeltaTime;
+
             curr_velocity *= Mathf.Max(speed - reduction, 0) / speed;
         }
 
