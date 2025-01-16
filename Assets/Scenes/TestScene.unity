@@ -644,8 +644,8 @@ Transform:
   m_GameObject: {fileID: 1657105217}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 0.5, z: -13.11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5, y: 0.4, z: -13.11}
+  m_LocalScale: {x: 1, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 1703555949}
   - component: {fileID: 1703555948}
   - component: {fileID: 1703555947}
-  - component: {fileID: 1703555946}
+  - component: {fileID: 1703555952}
   - component: {fileID: 1703555945}
   - component: {fileID: 1703555950}
   - component: {fileID: 1703555951}
@@ -699,29 +699,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &1703555946
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1703555943}
-  m_Material: {fileID: 13400000, guid: 79a5b39edb1cc7b49a2d71a35dc38115, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1703555947
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -833,6 +810,27 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   rot: {x: 0, y: 0}
+--- !u!65 &1703555952
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703555943}
+  m_Material: {fileID: 13400000, guid: 79a5b39edb1cc7b49a2d71a35dc38115, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1707135263
 GameObject:
   m_ObjectHideFlags: 0

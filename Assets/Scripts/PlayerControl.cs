@@ -28,7 +28,7 @@ public class PlayerControl : MonoBehaviour
     private float friction = 4.8f;
     private float gravity = 15.24f; // 800 HU^2 per second
 
-    private Vector3 applyFriction (Vector3 curr_velocity, float friction)
+    private Vector3 applyFriction(Vector3 curr_velocity, float friction)
     {
         float speed = curr_velocity.magnitude;
         float control = speed < stop_speed ? stop_speed : speed;
@@ -43,19 +43,13 @@ public class PlayerControl : MonoBehaviour
         return curr_velocity;
     }
 
-    private Vector3 applyGravity(Vector3 curr_velocity, float gravity_acceleration)
-    {
-        curr_velocity.y -= gravity_acceleration * Time.fixedDeltaTime;
-        return curr_velocity;
-    }
-
-    private Vector3 applyGravity(Vector3 curr_velocity, float gravity_acceleration, float gravity_multiplier)
+    private Vector3 applyGravity(Vector3 curr_velocity, float gravity_acceleration, float gravity_multiplier = 1.0f)
     {
         curr_velocity.y -= gravity_acceleration * gravity_multiplier * Time.fixedDeltaTime;
         return curr_velocity;
     }
 
-    private Vector3 accelerate (Vector3 curr_velocity, float max_velocity, Vector3 accel_dir, float accel_rate)
+    private Vector3 accelerate(Vector3 curr_velocity, float max_velocity, Vector3 accel_dir, float accel_rate)
     {
         float proj_velocity = Vector3.Dot(curr_velocity, accel_dir);
         // float accel_velocity = accel_rate * Time.fixedDeltaTime;
